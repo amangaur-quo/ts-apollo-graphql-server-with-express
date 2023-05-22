@@ -1,0 +1,29 @@
+{
+  "name": "apollo-server-express",
+  "version": "1.0.0",
+  "description": "This is simple apollo graph QL server using express js",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "Aman Gaur",
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/server": "^4.7.0",
+    "@graphql-tools/schema": "^9.0.19",
+    "@graphql-tools/utils": "^9.2.1",
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "graphql": "^16.6.0",
+    "jsonwebtoken": "^9.0.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.10.5",
+    "mongoose-paginate-v2": "^1.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}

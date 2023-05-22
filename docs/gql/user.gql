@@ -1,0 +1,67 @@
+mutation REGISTER_USER($user: UserCreationInput!) {
+  registerUser(user: $user) {
+    user {
+      id
+      email
+      name
+      createdAt
+      updatedAt
+    }
+    token
+  }
+}
+
+query AUTHENTICATE_USER($email: String!, $password: String!) {
+  authenticateUser(email: $email, password: $password) {
+    user {
+      id
+      email
+      name
+      createdAt
+      updatedAt
+    }
+    token
+  }
+}
+
+query AUTH_USER_PROFILE {
+  authUserProfile {
+    id
+    email
+    name
+    createdAt
+    updatedAt
+  }
+}
+
+query GET_USERS {
+  getUsers {
+    id
+    email
+    name
+    createdAt
+    updatedAt
+  }
+}
+
+mutation EDIT_USER_BY_ID($id: ID!, $user: UserUpdationInput!) {
+  editUserById(id: $id, user: $user) {
+    id
+    email
+    name
+    createdAt
+    updatedAt
+  }
+}
+
+mutation DELETE_USER_BY_ID($id: ID!) {
+  deleteUserById(id: $id) {
+    id
+    message
+    success
+  }
+}
+
+mutation IMAGE_UPLOADER($file: Upload!) {
+  imageUploader(file: $file)
+}

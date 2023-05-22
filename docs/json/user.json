@@ -1,0 +1,22 @@
+[ 
+	{
+  		"user": {
+    		"email": "aman@yopmail.com",
+    		"name": "Aman Gaur",
+    		"password": "12345678"
+  		}
+	},
+	{
+		"email": "aman@yopmail.com",
+  		"password": "12345678"
+	},
+	{
+		"id": "6454c7e742a840ff7e1549da",
+		"user": {
+			"name": "Gaur Sharma"
+		}
+	},
+	{
+		"id": "6454c7e742a840ff7e1549da"
+	}
+]

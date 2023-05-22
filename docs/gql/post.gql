@@ -1,0 +1,100 @@
+mutation CREATE_POST($post: PostCreationInput!) {
+  createPost(post: $post) {
+    id
+    title
+    content
+    author {
+      id
+      email
+      name
+    }
+    featuredImgae
+    createdAt
+    updatedAt
+  }
+}
+
+query GET_POSTS {
+  getPosts {
+    id
+    title
+    content
+    author {
+      id
+      email
+      name
+    }
+    featuredImgae
+    createdAt
+    updatedAt
+  }
+}
+
+query GET_POST_BY_ID($id: ID!) {
+  getPostById(id: $id) {
+    id
+    title
+    content
+    author {
+      id
+      email
+      name
+    }
+    featuredImgae
+    createdAt
+    updatedAt
+  }
+}
+
+mutation EDIT_POST_BY_ID($id: ID!, $post: PostUpdationInput!) {
+  editPostById(id: $id, post: $post) {
+    id
+    title
+    content
+    author {
+      id
+      email
+      name
+    }
+    featuredImgae
+    createdAt
+    updatedAt
+  }
+}
+
+mutation DELETE_POST_BY_ID($id: ID!) {
+  deletePostById(id: $id) {
+    id
+    message
+    success
+  }
+}
+
+query GET_POSTS_BY_LIMIT_AND_PAGE($page: Int, $limit: Int) {
+  getPostsByLimitAndPage(page: $page, limit: $limit) {
+    posts {
+      id
+      title
+      content
+      author {
+        id
+        email
+        name
+      }
+      featuredImgae
+      createdAt
+      updatedAt
+    }
+    paginator {
+      currentPage
+      hasNextPage
+      hasPrevPage
+      next
+      pageCount
+      perPage
+      postCount
+      prev
+      slNo
+    }
+  }
+}
